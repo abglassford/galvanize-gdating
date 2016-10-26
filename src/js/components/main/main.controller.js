@@ -6,10 +6,11 @@
     .module('gDating.components.main', [])
     .controller('mainController', mainController);
 
-  mainController.$inject = [];
+  mainController.$inject = ['gService'];
 
-  function mainController() {
+  function mainController(gService) {
     /*jshint validthis: true */
+    console.log(gService.test);
     this.greeting = 'Hello World!';
   }
 

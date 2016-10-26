@@ -8,10 +8,12 @@
     .module('gDating', [
       'ngRoute',
       'gDating.config',
+      'gDating.services',
       'gDating.components.main',
       'gDating.components.signup',
       'gDating.components.login',
-      'gDating.components.members'
+      'gDating.components.members',
+
     ]);
 
 })();
