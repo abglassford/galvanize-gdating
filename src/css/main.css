@@ -1,1 +1,33 @@
 /* add custom styles */
+html, body {
+  height: 100%;
+}
+.main-nav {
+  background-color: rgba(224, 120, 120, 0.8) !important;
+  border: none;
+}
+.main-nav a{
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+.splash-jumbo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1451597827324-4b55a7ebc5b7?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=68be0e104ce8a8c5a236c6b466438bc0');
+  background-position: center;
+  background-size: cover;
+}
+.splash-heading {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+.splash-button {
+  width: 30%;
+  margin: 0 auto;
+  background-color: rgba(224, 120, 120, 0.8);
+  border: none;
+}
+.splash-button:hover{
+  background-color: rgba(224, 120, 120, 0.9);
+  border: none;
+}
