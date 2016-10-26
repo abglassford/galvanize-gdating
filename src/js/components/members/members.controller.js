@@ -3,11 +3,11 @@
 
   angular
     .module('gDating.components.members', [])
-    .controller('membersController', membersController)
+    .controller('membersController', membersController);
 
-    membersController.$inject = []
+  membersController.$inject = [];
 
-    function membersController () {
-      this.test = 'THIS IS MEMBERS'
-    }
+  function membersController () {
+    this.test = 'THIS IS MEMBERS';
+  }
 }());

@@ -3,11 +3,11 @@
 
   angular
     .module('gDating.services', [])
-    .service('gService', gService)
+    .service('gService', gService);
 
-    gService.$inject = []
+    gService.$inject = [];
 
     function gService () {
-      this.test = 'THIS IS GSERVICE!'
+      this.test = 'THIS IS GSERVICE!';
     }
 }());

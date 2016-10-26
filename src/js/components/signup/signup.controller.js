@@ -3,11 +3,11 @@
 
   angular
     .module('gDating.components.signup', [])
-    .controller('signupController', signupController)
+    .controller('signupController', signupController);
 
-    signupController.$inject = []
+  signupController.$inject = [];
 
-    function signupController () {
-      this.test = 'THIS IS SIGNUP'
-    }
+  function signupController () {
+    this.test = 'THIS IS SIGNUP';
+  }
 }());

@@ -3,11 +3,11 @@
 
   angular
     .module('gDating.components.login', [])
-    .controller('loginController', loginController)
+    .controller('loginController', loginController);
 
-    loginController.$inject = []
+  loginController.$inject = [];
 
-    function loginController () {
-      this.test = "THIS IS LOGIN"
-    }
+  function loginController () {
+    this.test = 'THIS IS LOGIN';
+  }
 }());
