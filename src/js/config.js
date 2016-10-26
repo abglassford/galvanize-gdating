@@ -3,7 +3,7 @@
   'use strict';
 
   angular
-    .module('myApp.config', [])
+    .module('gDating.config', [])
     .config(appConfig);
 
   function appConfig() {}

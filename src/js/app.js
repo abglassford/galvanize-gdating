@@ -5,9 +5,9 @@
   'use strict';
 
   angular
-    .module('myApp', [
-      'myApp.config',
-      'myApp.components.main'
+    .module('gDating', [
+      'gDating.config',
+      'gDating.components.main'
     ]);
 
 })();
