@@ -1,4 +1,8 @@
-<div class="container">
-  <h1>if you're not logged in, you shouldn't see this</h1>
-  {{vm.test}}
+<div class="row">
+  <div class="col m4 card-panel leftCol">
+    <div class="" ng-repeat="member in vm.memberList">
+      <h4>{{member.username}}</h4>
+      <img ng-src="{{member.avatar}}" alt="" />
+    </div>
+  </div>
 </div>

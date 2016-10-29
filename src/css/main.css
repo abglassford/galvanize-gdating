@@ -65,3 +65,11 @@ body {
 .logi-div {
   padding: 15px;
 }
+.leftCol {
+  margin-top: 70px;
+  position: fixed;
+  width: 150px;
+  overflow-y: scroll;
+  top: 0;
+  bottom: 0;
+}

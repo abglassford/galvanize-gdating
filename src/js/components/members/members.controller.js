@@ -5,9 +5,20 @@
     .module('gDating.components.members', [])
     .controller('membersController', membersController);
 
-  membersController.$inject = [];
+  membersController.$inject = ['gService'];
 
-  function membersController () {
+  function membersController (gService) {
+    const vm = this;
+
+    vm.memberList = []
+    gService.getApi()
+    .then((data) => {
+      vm.memberList = data.data.data
+      console.log(vm.memberList);
+      return data
+    })
+
+
     this.test = 'THIS IS MEMBERS';
   }
 }());

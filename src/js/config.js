@@ -40,7 +40,6 @@
 
   function routeStart ($rootScope, $location, $route, gService) {
     $rootScope.$on('$routeChangeStart', (event, next, current) => {
-      console.log(gService.getUserStatus());
       if (!next.access) {
         if (!gService.getUserStatus()) {
           $location.path('/')
@@ -48,7 +47,6 @@
       }
     })
   }
-
   function checkLoggedIn ($rootScope, gService) {
     if (!gService.getUserStatus()) {
       $rootScope.loggedIn = false

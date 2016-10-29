@@ -12,7 +12,7 @@
     const vm = this
     vm.members = []
     vm.features = {}
-    gService.getApi()
+    gService.getSmallApi()
     .then((members) => {
       vm.members = members.data.data;
     })
@@ -21,8 +21,9 @@
     })
     vm.logOut = () => {
       localStorage.removeItem('token')
-      $location.path('/')
       $window.location.reload()
+      $location.path('/')
+
     }
 
 

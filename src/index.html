@@ -18,7 +18,7 @@
           <li><a ng-if="!loggedIn" href="#/login">Login</a></li>
           <li><a ng-if="!loggedIn" href="#/signup">Signup</a></li>
           <li><a ng-if="loggedIn" ng-click="vm.logOut()">Logout</a></li>
-          <li><a href="#/members">Members</a></li>
+          <li><a ng-if="loggedIn" href="#/members">Members</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
           <li><a href="#/">Home</a></li>
