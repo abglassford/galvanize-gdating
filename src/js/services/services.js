@@ -5,9 +5,22 @@
     .module('gDating.services', [])
     .service('gService', gService);
 
-    gService.$inject = [];
+    gService.$inject = ['$http'];
 
-    function gService () {
-      this.test = 'THIS IS GSERVICE!';
-    }
+    function gService ($http) {
+      const baseUrl = 'https://galvanize-student-apis.herokuapp.com/gdating/';
+
+      this.getApi = () => {
+        return $http.get(baseUrl + 'members?limit=20')
+      };
+
+
+
+
+
+
+      }
+
+
+
 }());

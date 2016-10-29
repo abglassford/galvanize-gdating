@@ -1,4 +1,76 @@
-<div img="https://images.unsplash.com/photo-1451597827324-4b55a7ebc5b7?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&s=68be0e104ce8a8c5a236c6b466438bc0" class="splash-jumbo jumbotron">
-  <h1 class="splash-heading text-center">Get Started...</h1>
+<div class="splash-jumbo jumbotron">
+  <h1 class="splash-heading text-center">Find a Deyt...</h1>
   <a class="btn btn-primary btn-lg splash-button" href="#/signup" role="button">Learn more</a>
 </div>
+  <div class="slider" slider>
+    <ul class="slides">
+        <li>
+          <img src="http://lorempixel.com/580/250/nature/1">
+          <div class="caption left-align">
+            <div class="row">
+              <div class="member-avatar col m4 col s12">
+                <h5>{{vm.members[8].username}}</h5>
+                <img class="featured-avatar" src={{vm.members[8].avatar}} alt="picture"/>
+                <h5>{{vm.members[8].names.firstName}} {{vm.members[8].names.lastName}}</h5>
+              </div>
+              <div class="member-info col m8 col s12 card-panel">
+                <p>
+                  {{vm.members[8].description}}
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <img src="http://lorempixel.com/580/250/nature/2">
+          <div class="caption left-align">
+            <div class="row">
+              <div class="member-avatar col m4 col s12">
+                <h5>{{vm.members[15].username}}</h5>
+                <img class="featured-avatar" src={{vm.members[15].avatar}} alt="picture"/>
+                <h5>{{vm.members[15].names.firstName}} {{vm.members[15].names.lastName}}</h5>
+              </div>
+              <div class="member-info col m8 col s12 card-panel">
+                <p>
+                  {{vm.members[15].description}}
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <img src="http://lorempixel.com/580/250/nature/3">
+          <div class="caption center-align">
+            <div class="row">
+              <div class="member-avatar col m4 col s12">
+                <h5>{{vm.members[19].username}}</h5>
+                <img class="featured-avatar" src={{vm.members[19].avatar}} alt="picture"/>
+                <h5>{{vm.members[19].names.firstName}} {{vm.members[19].names.lastName}}</h5>
+              </div>
+              <div class="member-info col m8 col s12 card-panel">
+                <p>
+                  {{vm.members[19].description}}
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <img src="http://lorempixel.com/580/250/nature/4">
+          <div class="caption right-align">
+            <div class="row">
+              <div class="member-avatar col m4 col s12">
+                <h5>{{vm.members[14].username}}</h5>
+                <img class="featured-avatar" src={{vm.members[14].avatar}} alt="picture"/>
+                <h5>{{vm.members[14].names.firstName}} {{vm.members[14].names.lastName}}</h5>
+              </div>
+              <div class="member-info col m8 col s12 card-panel">
+                <p>
+                  {{vm.members[14].description}}
+                </p>
+              </div>
+            </div>
+          </div>
+        </li>
+    </ul>
+  </div>
