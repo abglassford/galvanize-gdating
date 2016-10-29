@@ -10,6 +10,14 @@
     function gService ($http) {
       const baseUrl = 'https://galvanize-student-apis.herokuapp.com/gdating/';
 
+      this.getUserStatus = () => {
+        if (!localStorage.token) {
+          return false
+        } else {
+          return true
+        }
+      }
+
       this.getApi = () => {
         return $http.get(baseUrl + 'members?limit=20')
       };
@@ -36,8 +44,5 @@
 
 
 
-      }
-
-
-
+  }
 }());

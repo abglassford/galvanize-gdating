@@ -5,15 +5,16 @@
     .module('gDating.components.login', [])
     .controller('loginController', loginController);
 
-  loginController.$inject = ['gService'];
+  loginController.$inject = ['$rootScope', '$window', 'gService'];
 
-  function loginController (gService) {
+  function loginController ($rootScope, $window, gService) {
     const vm = this;
-
+    vm.loggedIn = $rootScope.loggedIn
     vm.login = () => {
       gService.login(vm.user)
       .then((user) => {
-        localStorage.setItem('token', user.data.token)
+        localStorage.setItem('token', user.data.data.token)
+        $window.location.reload();
       })
       .catch((err) => {
         console.log(err);

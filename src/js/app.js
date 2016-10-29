@@ -18,11 +18,10 @@
       'gDating.components.members',
     ]);
 
-    $('.button-collapse').sideNav({
-      menuWidth: 300, // Default is 240
-      closeOnClick: true // Closes side-nav on <a> clicks, useful for Angular/Meteor
-    }
-  );
+  $('.button-collapse').sideNav({
+    menuWidth: 300,
+    closeOnClick: true
+    });
   $('.collapsible').collapsible();
 
 })();

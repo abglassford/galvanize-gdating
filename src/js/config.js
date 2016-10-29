@@ -5,7 +5,9 @@
   angular
     .module('gDating.config', [])
     .config(appConfig)
-    .run(routeStart);
+    .run(routeStart)
+    .run(checkLoggedIn);
+
 
   function appConfig($routeProvider) {
     $routeProvider
@@ -38,12 +40,21 @@
 
   function routeStart ($rootScope, $location, $route, gService) {
     $rootScope.$on('$routeChangeStart', (event, next, current) => {
+      console.log(gService.getUserStatus());
       if (!next.access) {
-        if (!localStorage.getItem('token')) {
-            $location.path('/login')
+        if (!gService.getUserStatus()) {
+          $location.path('/')
         }
       }
     })
+  }
+
+  function checkLoggedIn ($rootScope, gService) {
+    if (!gService.getUserStatus()) {
+      $rootScope.loggedIn = false
+    } else {
+      $rootScope.loggedIn = true
+    }
   }
 
 })();

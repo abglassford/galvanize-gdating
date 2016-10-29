@@ -6,20 +6,24 @@
     .module('gDating.components.main', ['ngAnimate'])
     .controller('mainController', mainController);
 
-  mainController.$inject = ['gService', '$interval'];
+  mainController.$inject = ['$window', '$location', 'gService'];
 
-  function mainController(gService, $interval) {
+  function mainController($window, $location, gService) {
     const vm = this
     vm.members = []
     vm.features = {}
     gService.getApi()
     .then((members) => {
-      vm.members = members.data.data
-      console.log(vm.members);
+      vm.members = members.data.data;
     })
     .catch((err) => {
       console.log(err);
     })
+    vm.logOut = () => {
+      localStorage.removeItem('token')
+      $location.path('/')
+      $window.location.reload()
+    }
 
 
   }

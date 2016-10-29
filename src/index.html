@@ -10,13 +10,14 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
   <body ng-cloak>
-    <nav class="main-nav">
+    <nav class="main-nav" ng-controller="mainController as vm">
       <div class="nav-wrapper">
         <a href="#!" class="brand-logo">Deyt</a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#/login">Login</a></li>
-          <li><a href="#/signup">Signup</a></li>
+          <li><a ng-if="!loggedIn" href="#/login">Login</a></li>
+          <li><a ng-if="!loggedIn" href="#/signup">Signup</a></li>
+          <li><a ng-if="loggedIn" ng-click="vm.logOut()">Logout</a></li>
           <li><a href="#/members">Members</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
