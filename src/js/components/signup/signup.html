@@ -1,24 +1,36 @@
-<div class="login-jumbo jumbotron">
-  <div class="col-md-6 col-md-offset-3 signup-div panel">
-    <h1>Sign Up!</h1>
-    <form class="signup-form" ng-submit="vm.newUser(vm.new)">
-      <div class="form-group col-md-6 signup-user-pass">
-        <label for="email">Email</label>
-        <input ng-model="vm.new.email" class="signup-input form-control" type="email" name="email" value="">
-        <label for="username">Username</label>
-        <input ng-model="vm.new.username" class="signup-input form-control" type="text" name="username" value="">
-        <label for="password">Password</label>
-        <input ng-model="vm.new.password" class="signup-input form-control" type="password" name="password" value="">
-      </div>
-      <div class="form-group col-md-6">
-        <label for="first_name">First Name</label>
-        <input ng-model="vm.new.names.first_name" class="signup-input form-control" type="text" name="first_name" value="">
-        <label for="last_name">Last Name</label>
-        <input ng-model="vm.new.names.last_name" class="signup-input form-control" type="text" name="last_name" value="">        
-        <label for="phone_number">Phone Number</label>
-        <input ng-model="vm.new.phone_number" class="signup-input form-control" type="phone" name="phone_number" value="">
-        <button class="btn signup-submit pull-right"type="button" name="button">Submit</button>
-      </div>
-    </form>
+<div class="row">
+  <div class="signup-div col m8 offset-m2 card-panel">
+    <div class="row">
+      <h2>Sign Up!</h2>
+      <form class="signup-form" ng-submit="vm.register()">
+        <div class="form-group col m4 signup-user-pass">
+          <label for="email">Email</label>
+          <input ng-model="vm.new.email" class="signup-input form-control" type="email" name="email" value="">
+          <label for="username">Username</label>
+          <input ng-model="vm.new.username" class="signup-input form-control" type="text" name="username" value="">
+          <label for="password">Password</label>
+          <input ng-model="vm.new.password" class="signup-input form-control" type="password" name="password" value="">
+        </div>
+        <div class="form-group col m4">
+          <label for="firstName">First Name</label>
+          <input ng-model="vm.new.names.firstName" class="signup-input form-control" type="text" name="firstName" value="">
+          <label for="lastName">Last Name</label>
+          <input ng-model="vm.new.names.lastName" class="signup-input form-control" type="text" name="lastName" value="">
+          <label for="phone_number">Phone Number</label>
+          <input ng-model="vm.new.phone_number" class="signup-input form-control" type="tel" name="phone_number" value="">
+        </div>
+        <div class="form-group col m4">
+          <label for="dob">Date Of Birth (18+)</label>
+          <input ng-model="vm.new.dob" class="signup-input form-control" type="date" name="dob" value="">
+          <label for="slug">Slug</label>
+          <input ng-model="vm.new.slug" class="signup-input form-control" type="text" name="slug">
+          <label for="lat">Lat</label>
+          <input ng-model="vm.new.address.geo.lat" type="number" name="name">
+          <label for="lng">Lng</label>
+          <input ng-model="vm.new.address.geo.lng" type="number" name="name">
+        </div>
+        <button class="btn-floating btn-large waves-effect waves-light teal right"><i class="material-icons">done</i></button>
+      </form>
+    </div>
   </div>
 </div>
